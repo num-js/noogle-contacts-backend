@@ -24,7 +24,7 @@ const contactsSchema = mongoose.Schema({
     creating_date: {
         type: Date,
         default: Date.now
-    },
+    }
 });
 
-module.exports = mongoose.model('nooglecontacts', contactsSchema);
+module.exports = mongoose.model('nooglev1contacts', contactsSchema);

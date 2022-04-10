@@ -9,7 +9,10 @@ const app = express();
 //Middlewares
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/api', require('./routes/contactsRoute'))
+
+//API Routes
+app.use('/api/v1', require('./routes/contactsV1Routes'))
+app.use('/api/v2', require('./routes/contactsV2Routes'))
 
 
 //Connection with DB
