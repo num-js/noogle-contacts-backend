@@ -16,7 +16,8 @@ app.use('/api/v2', require('./routes/contactsV2Routes'))
 
 
 //Connection with DB
-mongoose.connect(process.env.DB_URI, {
+const MONGODB_URI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.qzgcd.mongodb.net/${process.env.DB_DATABASE}?retryWrites=true&w=majority`;
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
